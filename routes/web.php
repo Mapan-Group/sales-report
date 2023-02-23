@@ -13,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::prefix("template")->group(function () {
+    Route::get("/", function () {
+        return view('pages/login');
+    });
+    Route::get("/dash", function () {
+        return view('pages/index');
+    });
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
